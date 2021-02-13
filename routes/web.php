@@ -49,3 +49,11 @@ Route::post('addnewdriver', 'WebAppController@addNewDriver')->name('addnewdriver
 
 
 Route::get('map', 'WebAppController@getcordinates')->name('map');
+
+
+Route::get('students', 'WebAppController@studentsView')->name('students');
+Route::get('addstudents', 'WebAppController@addStudentsView')->name('addstudents');
+Route::post('addnewstudent', 'WebAppController@addNewStudent')->name('addnewstudent');
+
+
+

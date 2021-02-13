@@ -135,4 +135,35 @@ class WebAppController extends Controller
             return view("drivers", ["users"=>$users]);
     }
 
+
+
+    public function studentsView()
+    {
+        $users = DB::table('users')->where('type_id','2')->get();
+        return view("students", ["users"=>$users]);
+    }
+
+
+    public function addStudentsView()
+    {
+        return view('addstudent');
+    }
+
+
+    public function addNewStudent(Request $request)
+    {
+        $user = User::create([
+            'user_id' => $request['user_id'],
+            'type_id' => 2,
+            'name' => $request['name'],
+            'password' => $request['password'],
+            'contact' => $request['contact'],
+            'email' => $request['user_id'].'@pafkiet.edu.pk',
+            ]);
+
+            $users = DB::table('users')->where('type_id','2')->get();
+            return view("students", ["users"=>$users]);
+    }
+
+
 }

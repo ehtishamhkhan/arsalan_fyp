@@ -45,10 +45,6 @@
         <!-- Argon JS -->
         <script src="{{ asset('argon') }}/js/argon.js?v=1.0.0"></script>
 
-        <script src="https://maps.googleapis.com/maps/api/js" async defer></script>
 
-<script>
-  function initMap() {}
-</script>
     </body>
 </html>
